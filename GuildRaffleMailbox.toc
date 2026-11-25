@@ -1,0 +1,12 @@
+## Interface: 16001
+## Title: GuildRaffleMailbox
+## Notes: Officer-operated guild raffle payment ledger
+## Author: GuildRaffleMailbox
+## Version: 1.0.0
+## SavedVariablesPerCharacter: GuildRaffleMailboxDB
+
+Core.lua
+Backup.lua
+Mailbox.lua
+SelfTest.lua
+UI.lua

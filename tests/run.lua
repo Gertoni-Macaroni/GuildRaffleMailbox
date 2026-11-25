@@ -17,10 +17,10 @@ CaseAccentInsensitiveParse = function(value)
     return string.lower(value)
 end
 
-assert(loadfile(root .. "/GuildRaffleMailbox/Core.lua"))(addonName, ns)
-assert(loadfile(root .. "/GuildRaffleMailbox/Backup.lua"))(addonName, ns)
-assert(loadfile(root .. "/GuildRaffleMailbox/Mailbox.lua"))(addonName, ns)
-assert(loadfile(root .. "/GuildRaffleMailbox/SelfTest.lua"))(addonName, ns)
+assert(loadfile(root .. "/Core.lua"))(addonName, ns)
+assert(loadfile(root .. "/Backup.lua"))(addonName, ns)
+assert(loadfile(root .. "/Mailbox.lua"))(addonName, ns)
+assert(loadfile(root .. "/SelfTest.lua"))(addonName, ns)
 
 local Core = ns.Core
 local Controller = ns.Controller
@@ -1289,7 +1289,7 @@ test("panel initialization exposes the collector toggle and slash command", func
     CreateFrame = function()
         return fakeFrame()
     end
-    assert(loadfile(root .. "/GuildRaffleMailbox/UI.lua"))(addonName, ns)
+    assert(loadfile(root .. "/UI.lua"))(addonName, ns)
     local uiMails = { mail("Rina Ashleaf", 1000) }
     for index = 1, 12 do
         table.insert(uiMails, mail("Member " .. tostring(index), 0))
